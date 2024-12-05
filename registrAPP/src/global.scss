@@ -1,0 +1,133 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Global Colors */
+:root {
+  --ion-color-primary: #007bff; /* Azul principal */
+  --ion-color-secondary: #ffc107; /* Amarillo */
+  --ion-color-light: #ffffff; /* Blanco */
+  --ion-color-background: #f4f4f4; /* Fondo claro */
+}
+
+/* Ensures all IonContent components take full height */
+body,
+html,
+ion-content {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styling for IonContent */
+ion-content {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Asegura que ocupa toda la pantalla */
+  background-color: var(--ion-color-background);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: "Arial", sans-serif;
+  color: var(--ion-color-primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  color: var(--ion-color-secondary);
+  text-align: center;
+}
+
+/* Buttons */
+ion-button {
+  background-color: var(--ion-color-primary);
+  color: var(--ion-color-light);
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+ion-button:hover {
+  background-color: var(--ion-color-secondary);
+  color: var(--ion-color-primary);
+}
+
+/* Containers */
+.qr-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.qr-container img {
+  border: 2px solid var(--ion-color-secondary);
+  border-radius: 10px;
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Form Styling */
+ion-input {
+  margin-bottom: 15px;
+  border: 1px solid var(--ion-color-primary);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  ion-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

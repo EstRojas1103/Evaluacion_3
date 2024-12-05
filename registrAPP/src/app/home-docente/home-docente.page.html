@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Home Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <h2>Selecciona una sección:</h2>
+    <ion-button
+      *ngFor="let section of sections"
+      expand="block"
+      (click)="selectSection(section)"
+    >
+      {{ section }}
+    </ion-button>
+  </div>
+
+  <!-- Mostrar QR si fue generado -->
+  <div *ngIf="qrCode" class="qr-container">
+    <h3>Código QR para {{ selectedSection }}</h3>
+    <img [src]="qrCode" alt="QR Code" />
+    <ion-button expand="block" color="danger" (click)="clearQRCode()">
+      Cerrar QR
+    </ion-button>
+  </div>
+</ion-content>

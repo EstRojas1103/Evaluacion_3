@@ -1,0 +1,77 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa */
+    background-color: var(--ion-color-primary); /* Fondo azul */
+  
+    .register-content {
+      background-color: var(--ion-color-light); /* Fondo blanco */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+      width: 90%;
+      max-width: 500px; /* Ancho máximo */
+      text-align: center;
+    }
+  
+    h3 {
+      color: var(--ion-color-primary); /* Azul */
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+  
+      label {
+        display: block;
+        color: var(--ion-color-secondary); /* Amarillo */
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+  
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--ion-color-secondary); /* Borde amarillo */
+        border-radius: 8px;
+        background-color: var(--ion-color-light); /* Fondo blanco */
+        color: #000; /* Texto negro */
+      }
+  
+      input::placeholder {
+        color: #666; /* Color del texto del placeholder */
+      }
+    }
+  
+    .btn {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      text-transform: uppercase;
+  
+      &.btn-warning {
+        background-color: var(--ion-color-secondary); /* Amarillo */
+        color: var(--ion-color-primary); /* Azul */
+      }
+  
+      &.btn-warning:hover {
+        background-color: var(--ion-color-light); /* Blanco */
+        color: var(--ion-color-secondary); /* Amarillo */
+      }
+  
+      &.btn-success {
+        background-color: var(--ion-color-primary); /* Azul */
+        color: var(--ion-color-light); /* Blanco */
+      }
+  
+      &.btn-success:hover {
+        background-color: var(--ion-color-secondary); /* Amarillo */
+        color: var(--ion-color-primary); /* Azul */
+      }
+    }
+  }
+  

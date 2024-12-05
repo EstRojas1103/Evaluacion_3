@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="text-white">RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="register-content">
+    <div *ngIf="!userType" class="user-type-selection">
+      <h3>¿Qué tipo de usuario eres?</h3>
+      <button class="btn btn-warning" (click)="selectUserType('estudiante')">
+        Estudiante
+      </button>
+      <button class="btn btn-warning" (click)="selectUserType('docente')">
+        Docente
+      </button>
+    </div>
+
+    <div *ngIf="userType === 'estudiante'">
+      <h3>Registro de Estudiante</h3>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <div class="form-group">
+          <label for="career">Carrera:</label>
+          <input
+            type="text"
+            formControlName="career"
+            id="career"
+            placeholder="Ingrese su carrera"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input
+            type="text"
+            formControlName="name"
+            id="name"
+            placeholder="Ingrese su nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            formControlName="email"
+            id="email"
+            placeholder="Ingrese su correo electrónico"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            formControlName="password"
+            id="password"
+            placeholder="Ingrese su contraseña"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-success btn-block mt-3">
+          Aceptar
+        </button>
+      </form>
+    </div>
+
+    <div *ngIf="userType === 'docente'">
+      <h3>Registro de Docente</h3>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            formControlName="email"
+            id="email"
+            placeholder="Ingrese su correo electrónico"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            formControlName="password"
+            id="password"
+            placeholder="Ingrese su contraseña"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-success btn-block mt-3">
+          Aceptar
+        </button>
+      </form>
+    </div>
+  </div>
+</ion-content>

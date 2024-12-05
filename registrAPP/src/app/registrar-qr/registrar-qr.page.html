@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-select
+    placeholder="Selecciona una sección"
+    (ionChange)="selectSection($event.detail.value)"
+  >
+    <ion-select-option *ngFor="let section of sections" [value]="section">
+      {{ section }}
+    </ion-select-option>
+  </ion-select>
+
+  <div *ngIf="selectedSection && !attendanceMessage" class="camera-container">
+    <video #video autoplay></video>
+  </div>
+
+  <div *ngIf="attendanceMessage" class="attendance-message">
+    <p>{{ attendanceMessage }}</p>
+  </div>
+</ion-content>
